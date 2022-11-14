@@ -1,0 +1,58 @@
+.site-branding {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+
+    &__atomic-symbol {
+        max-width: 12rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    &__headframe {
+        max-width: 12rem;
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+
+    .site-title {
+        margin-bottom: .5rem;
+        border-bottom: none;
+
+        @include respond(tab-port) {
+            max-width: 90%;
+            margin: 0 auto;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        a {
+            font-size: 6rem;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: $color-black;
+        }
+    }
+
+    .site-description {
+        font-size: 3rem;
+        text-align: center;
+
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        @include respond(tab-land) {
+            text-align: center;
+        }
+    }
+}

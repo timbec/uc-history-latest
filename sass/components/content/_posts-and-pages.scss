@@ -1,0 +1,110 @@
+#page {
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+.entry-header {
+    margin-top: 3rem;
+
+    h1 {
+        font-size: 4rem;
+        line-height: 1.2;
+        color: $color-black;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+.entry-content {
+    max-width: 120rem;
+    margin: 0 auto;
+
+    p {
+        max-width: 80rem;
+        // padding: 1rem 3rem;
+        margin: 0 auto;
+        margin-bottom: 1.6rem;
+
+        @include respond(tab-port) {
+            max-width: 100%;
+        }
+    }
+
+    p.first-paragraph {
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: left;
+        font-variant: small-caps;
+    }
+}
+
+// class for constraining elements
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+/***Placeholder Styles for Basic Formatting**/
+.news-list,
+.places-list,
+.photos-list,
+.writing-list {
+    width: 100%;
+
+    @include respond(phone) {
+        width: 100%;
+    }
+}
+
+
+
+
+
+.post-navigation {}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+
+    .nav-previous {
+        padding-right: 3rem;
+    }
+
+    .nav-next {
+        padding-left: 3rem;
+    }
+
+    a {
+        font-size: 1.8rem;
+    }
+}
+
+/**
+* Container classes for pages with sidebars
+*/
+
+.page-container {
+    display: flex;
+
+    @include respond('tab-port') {
+        flex-direction: column;
+    }
+
+    main {
+        flex-basis: 75%;
+
+        @include respond('tab-port') {
+            flex-basis: 100%;
+        }
+
+    }
+
+    aside {
+        flex-basis: 25%;
+
+        @include respond('tab-port') {
+            flex-basis: 100%;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+#respond {
+    background: $color-grey;
+    width: 100%;
+    float: left;
+    padding: 3rem 5rem;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.comments-area {
+    max-width: 80rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+
+    p,
+    a {
+        color: $color-white;
+    }
+}
+
+.comment-list {
+    clear: both;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comment {
+    min-height: 2.25em;
+    padding-left: 1.25em;
+
+    @include respond('phone') {
+        max-width: 35rem;
+    }
+}
+
+.comment-meta {
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+.comment-author {
+    line-height: 1.5;
+
+    img {
+        border-radius: 1.5em;
+        display: block;
+        float: left;
+        height: 2.5em;
+        margin-top: 0.5em;
+        margin-right: 0.75em;
+        width: 2.5em;
+    }
+
+    b {
+        font-weight: 400;
+    }
+
+    span.say {
+        font-size: 1.6rem;
+    }
+}
+
+.comment-content {
+    padding: 0 3rem;
+
+    p {
+        font-size: 1em;
+        line-height: 1.8;
+        margin: 1em 0;
+    }
+}
+
+input#submit {
+    border-top-color: rgb(204, 204, 204);
+    border-right-color: rgb(204, 204, 204);
+    border-bottom-color: rgb(204, 204, 204);
+    border-left-color: rgb(204, 204, 204);
+    border-color: #ccc #ccc #bbb #ccc;
+    border-radius: 3px;
+    background: $color-black;
+    color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    font-size: 12px;
+    font-size: .9rem;
+    text-transform: uppercase;
+    line-height: 1;
+    padding: .6em 1em .6em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    margin-top: 5rem;
+    border: 1px solid $color-grey;
+
+    &:hover {
+        border-color: #ccc #ccc #bbb #ccc;
+        border-radius: 3px;
+        background: #09021d;
+        color: rgba(255, 255, 255, 0.8);
+        cursor: pointer;
+        font-size: 12px;
+        font-size: .9rem;
+        text-transform: uppercase;
+        line-height: 1;
+        padding: .6em 1em .6em;
+        text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+    }
+}

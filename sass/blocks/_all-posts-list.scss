@@ -1,0 +1,26 @@
+.all-posts-list {
+
+    .list {
+
+        &__container {
+            display: flex;
+
+            &--item {
+                border: 1px solid $color-black;
+
+                img {
+                    width: 50% !important;
+                }
+
+                &__title {
+                    font-size: 2rem;
+                    font-weight: bold;
+                }
+
+                &__content {
+                    margin: .6rem 1.6rem;
+                }
+            }
+        }
+    }
+}

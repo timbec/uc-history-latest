@@ -1,0 +1,59 @@
+{
+  "name": "uc-history-2022",
+  "version": "1.0.0",
+  "description": "Hybrid Gutenberg Wordpress theme for the uraniumcity-history.com website.",
+  "author": "Tim Beckett",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "WordPress",
+    "Theme"
+  ],
+  "main": "index.js",
+  "homepage": "https://github.com/Automattic/_s#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Automattic/_s.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Automattic/_s/issues"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^19.2.2",
+    "dir-archiver": "^1.1.1",
+    "node-sass": "^7.0.1",
+    "rtlcss": "^3.5.0"
+  },
+  "rtlcssConfig": {
+    "options": {
+      "autoRename": false,
+      "autoRenameStrict": false,
+      "blacklist": {},
+      "clean": true,
+      "greedy": false,
+      "processUrls": false,
+      "stringMap": []
+    },
+    "plugins": [],
+    "map": false
+  },
+  "scripts": {
+    "preview": "npm-run-all --parallel sync start",
+    "sync": "browser-sync start -p 'http:uchistory.local/' --files '**/*.php' 'build/*js' 'build/*.css'",
+    "start": "wp-scripts start src/index.js uc-blocks/banner.js uc-blocks/slideshow.js uc-blocks/slide.js",
+    "dev": "wp-scripts start",
+    "devFast": "wp-scripts start",
+    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
+    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+    "compile:rtl": "rtlcss style.css style-rtl.css",
+    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
+    "lint:js": "wp-scripts lint-js 'js/*.js'",
+    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
+  },
+  "dependencies": {
+    "browser-sync": "^2.27.9",
+    "@glidejs/glide": "^3.4.1",
+    "@wordpress/icons": "^7.0.1",
+    "axios": "^0.21.1",
+    "normalize.css": "^8.0.1"
+  }
+}

@@ -1,0 +1,15 @@
+aside {
+
+    h2 {
+        font-size: 2rem;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: $color-black;
+        margin-bottom: 3rem;
+    }
+
+    li {
+        border: 1px solid $color-black;
+    }
+}

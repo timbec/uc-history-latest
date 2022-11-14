@@ -1,0 +1,74 @@
+/*!
+Theme Name: Uranium City History 2022
+Author: Tim Beckett
+Author URI: https://tim-beckett.com
+Description: Updated theme for the uraniumcity-history.com website, using elements of 2022 styles and hybrid Gutenberg and regular WP theming
+Version: 1.0.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+    - normalize
+    - box-sizing
+
+# Base
+    - 2022 Styles
+
+/
+*-------------------------------------------------------------- # Generic --------------------------------------------------------------*/
+@import "generic/normalize";
+@import "generic/box-sizing";
+
+/*--------------------------------------------------------------
+# Abstracts
+--------------------------------------------------------------*/
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+/*--------------------------------------------------------------
+# Base
+--------------------------------------------------------------*/
+@import "base/2022";
+@import "base/base";
+@import "base/typography";
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/content/header";
+@import "components/content/posts-and-pages";
+@import "components/content/comment";
+@import "components/navigation";
+@import "components/mobile-nav";
+@import "components/content/places-full-width";
+@import "components/content/places-sidebar";
+@import "components/content/footer";
+
+/*--------------------------------------------------------------
+# Blocks
+--------------------------------------------------------------*/
+@import "blocks/page-banner";
+@import "blocks/hero-slider";
+@import "blocks/cover";
+@import "blocks/news-list";
+@import "blocks/all-posts-list";
+
+/*--------------------------------------------------------------
+# Pages
+--------------------------------------------------------------*/
+@import "pages/home";
+@import "pages/news";
+@import "pages/writing";
+@import "pages/places";
+@import "pages/memorabilia";
+@import "pages/video";
+@import "pages/photos";
+@import "pages/aside";
+
+/*--------------------------------------------------------------
+# Helpers
+--------------------------------------------------------------*/
+@import "base/helpers";
