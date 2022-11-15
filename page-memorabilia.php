@@ -16,11 +16,14 @@ get_header();
 ?>
 
 <section class="page-container">
-<main id="primary" class="site-main page-news">
+<main id="primary" class="site-main page-memorabilia">
 
-	<h1>Uranium City Memorabilia</h1>
+<article class="page-memorabilia__intro">
+    <h1 class="page-memorabilia__title">Uranium City Memorabilia</h1>
 
 	<p>UC related things people have sent me over the years.  </p>
+</article>
+	
 		    <?php 
     
     $newsWidget = new WP_Query(array(
@@ -31,13 +34,13 @@ get_header();
     )); 
     while ($newsWidget->have_posts()) {
         $newsWidget->the_post(); ?>
-        <li class="page-news__listing">
-        <figure class="page-news__thumbnail">
+        <li class="page-memorabilia__listing">
+        <figure class="page-memorabilia__thumbnail">
             <a href="<?php the_permalink(); ?>">
 		<?php echo the_post_thumbnail(); ?>
         </a>
         </figure>
-        <div class="page-news__content">
+        <div class="page-memorabilia__content">
             		<h3>
 		<a href="<?php the_permalink(); ?>">
             <?php the_title(); ?>

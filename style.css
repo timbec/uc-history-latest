@@ -588,7 +588,6 @@ figcaption {
 .wp-block-image {
 	width: 100%;
 	max-width: 80rem;
-	padding-left: 3rem;
 	margin: 0;
 	margin-bottom: 3rem;
 }
@@ -795,7 +794,7 @@ figcaption {
 
 .comments-area p,
 .comments-area a {
-	color: #fff;
+	color: #09021d;
 }
 
 .comment-list {
@@ -885,6 +884,15 @@ input#submit:hover {
 	line-height: 1;
 	padding: .6em 1em .6em;
 	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.widget_recent_comments {
+	border: 1px solid #09021d;
+}
+
+.widget_recent_comments li {
+	text-align: left;
+	padding: .5rem 1rem;
 }
 
 .main-navigation {
@@ -1531,23 +1539,33 @@ input#submit:hover {
 	}
 }
 
+.page-news__thumbnail {
+	flex-basis: 40%;
+}
+
 @media only screen and (max-width: 56.25em) {
 	.page-news__thumbnail {
-		width: 100%;
+		flex-basis: 100%;
 	}
 }
 
 .page-news__content {
 	margin-left: 5rem;
-	width: 80rem;
+	flex-basis: 60%;
 }
 
 @media only screen and (max-width: 56.25em) {
 	.page-news__content {
-		width: 96%;
+		flex-basis: 96%;
 		margin-right: 2%;
 		margin-left: 2%;
 	}
+}
+
+.page-writing__intro {
+	width: 90%;
+	padding: 1rem 2rem;
+	margin: 0 auto;
 }
 
 .page-writing__listing {
@@ -1558,8 +1576,24 @@ input#submit:hover {
 	margin-bottom: 3rem;
 }
 
+@media only screen and (max-width: 56.25em) {
+	.page-writing__listing {
+		flex-direction: column;
+		width: 100%;
+		padding: 0 2rem;
+		margin-left: 0;
+		margin-bottom: 5rem;
+	}
+}
+
 .page-writing__thumbnail {
 	max-width: 35rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.page-writing__thumbnail {
+		max-width: 100%;
+	}
 }
 
 .page-writing__thumbnail img {
@@ -1569,6 +1603,12 @@ input#submit:hover {
 
 .page-writing__content {
 	margin-left: 5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.page-writing__content {
+		margin-left: 0;
+	}
 }
 
 .single-writing .wp-block-image {
@@ -1674,7 +1714,6 @@ input#submit:hover {
 .page-memorabilia {
 	max-width: 120rem;
 	margin: 0 auto;
-	margin-top: 5rem;
 }
 
 .page-memorabilia__title {
@@ -1683,6 +1722,26 @@ input#submit:hover {
 
 .page-memorabilia__intro {
 	margin-bottom: 5rem;
+	margin-left: 5rem;
+}
+
+.page-memorabilia__listing {
+	display: flex;
+	margin-right: 5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.page-memorabilia__listing {
+		margin-right: 0;
+	}
+}
+
+.page-memorabilia__thumbnail {
+	flex-basis: 40%;
+}
+
+.page-memorabilia__content {
+	flex-basis: 60%;
 }
 
 .page-memorabilia__container {
@@ -1706,18 +1765,34 @@ input#submit:hover {
 	margin-bottom: 5rem;
 }
 
-.page-photos__listing {
+.page-photos__content {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
+.page-photos__listing {
+	display: flex;
+	flex-direction: column;
+	width: 32.33%;
+	margin-left: 0;
+	margin-bottom: 5rem;
+	border: 1px solid #09021d;
+}
+
 .page-photos__thumbnail {
-	width: 60rem;
+	width: auto;
+}
+
+.page-photos__meta {
+	display: flex;
+	justify-content: center;
 }
 
 .type-photos .entry-content {
 	display: flex;
 	justify-content: space-between;
+	flex-direction: row;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -1726,34 +1801,44 @@ input#submit:hover {
 	}
 }
 
-.type-photos .entry-content .photo-text {
-	width: 45%;
+.type-photos .entry-content .wp-block-group {
+	flex-basis: 33%;
 }
 
 @media only screen and (max-width: 56.25em) {
-	.type-photos .entry-content .photo-text {
-		width: 100%;
+	.type-photos .entry-content .wp-block-group {
+		flex-basis: 100%;
 	}
 }
 
-.type-photos .entry-content .photo-gallery {
-	width: 50%;
+.type-photos .entry-content .wp-block-gallery {
+	flex-basis: 66%;
 }
 
 @media only screen and (max-width: 56.25em) {
-	.type-photos .entry-content .photo-gallery {
-		width: 100%;
+	.type-photos .entry-content .wp-block-gallery {
+		flex-basis: 100%;
 	}
 }
 
-.type-photos .entry-content .photo-gallery .gallery {
+.type-photos .entry-content .wp-block-gallery .gallery {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
-.type-photos .entry-content .photo-gallery .gallery .gallery-item {
+.type-photos .entry-content .wp-block-gallery .gallery .gallery-item {
 	width: 33%;
+}
+
+aside {
+	margin-top: 3rem;
+}
+
+aside .widget_block {
+	width: 100%;
+	border: 1px solid black;
+	margin-bottom: 3rem;
 }
 
 aside h2 {
@@ -1766,6 +1851,8 @@ aside h2 {
 }
 
 aside li {
+	text-align: center;
+	margin-left: 0;
 	border: 1px solid #09021d;
 }
 

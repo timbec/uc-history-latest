@@ -1,13 +1,27 @@
 .page-photos {
 
-
-    &__listing {
+    &__content {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
+    &__listing {
+        display: flex;
+        flex-direction: column;
+        width: 32.33%;
+        margin-left: 0;
+        margin-bottom: 5rem;
+        border: 1px solid $color-black;
+    }
+
     &__thumbnail {
-        width: 60rem;
+        width: auto;
+    }
+
+    &__meta {
+        display: flex;
+        justify-content: center;
     }
 }
 
@@ -17,24 +31,25 @@
     .entry-content {
         display: flex;
         justify-content: space-between;
+        flex-direction: row;
 
         @include respond('tab-port') {
             flex-direction: column;
         }
 
-        .photo-text {
-            width: 45%;
+        .wp-block-group {
+            flex-basis: 33%;
 
             @include respond('tab-port') {
-                width: 100%;
+                flex-basis: 100%;
             }
         }
 
-        .photo-gallery {
-            width: 50%;
+        .wp-block-gallery {
+            flex-basis: 66%;
 
             @include respond('tab-port') {
-                width: 100%;
+                flex-basis: 100%;
             }
 
             .gallery {

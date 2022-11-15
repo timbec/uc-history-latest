@@ -22,18 +22,19 @@
 
     &__thumbnail {
         // max-width: 60rem;
+        flex-basis: 40%;
 
         @include respond('tab-port') {
-            width: 100%;
+            flex-basis: 100%;
         }
     }
 
     &__content {
         margin-left: 5rem;
-        width: 80rem;
+        flex-basis: 60%;
 
         @include respond('tab-port') {
-            width: 96%;
+            flex-basis: 96%;
             margin-right: 2%;
             margin-left: 2%;
         }

@@ -17,10 +17,14 @@ get_header();
 
 	<main id="primary" class="site-main page-photos">
 
-	<h1>Photo Galleries</h1>
+    <article class="page-photos__intro">
+        	<h1>Photo Galleries</h1>
 
 	<p>Photographs, taken by me and other people, from UC and area.</p>
-		    <?php 
+    </article>
+
+    <section class="page-photos__content">
+        	    <?php 
     
     $photoWidget = new WP_Query(array(
         'posts_per_page' => -1,
@@ -36,23 +40,23 @@ get_header();
 		<?php echo the_post_thumbnail(); ?>
         </a>
         </figure>
-        <div class="page-photos__content">
+        <div class="page-photos__meta">
             		<h3>
 		<a href="<?php the_permalink(); ?>">
             <?php the_title(); ?>
         </a>
 		</h3>
-		<p>
-			<?php the_excerpt(); ?>
-		</p>
+		<!-- <p>
+			<?php //the_excerpt(); ?>
+		</p> -->
         </div>
         </li>
         
         
     <?php } ?>
+    </section>
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();

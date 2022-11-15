@@ -1,7 +1,6 @@
 .page-memorabilia {
     max-width: 120rem;
     margin: 0 auto;
-    margin-top: 5rem;
 
     &__title {
         font-size: 3rem;
@@ -9,6 +8,24 @@
 
     &__intro {
         margin-bottom: 5rem;
+        margin-left: 5rem;
+    }
+
+    &__listing {
+        display: flex;
+        margin-right: 5rem;
+
+        @include respond('tab-port') {
+            margin-right: 0;
+        }
+    }
+
+    &__thumbnail {
+        flex-basis: 40%;
+    }
+
+    &__content {
+        flex-basis: 60%;
     }
 
     &__container {

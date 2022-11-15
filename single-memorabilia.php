@@ -10,17 +10,9 @@
 get_header();
 ?>
 
-
+<div class="page-container">
 	<main id="primary" class="site-main page-memorabilia">
 
-	<article class="page-memorabilia__intro">
-		<h1 class="page-memorabilia__title">
-			Welcome to the Memorabilia Page
-		</h1>
-		<p>
-			This pages features memoribilia sent to me over the years by ex-residents and collected by myself. Sadly, much of the memorabilia that existed in archives is slowly disappearing. 
-		</p>
-	</article>
 	<ul class="page-memorabilia__container">
 		<?php
 		while ( have_posts() ) :
@@ -48,5 +40,8 @@ get_header();
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+get_sidebar(); ?>
+</div>
+
+<?php
 get_footer();

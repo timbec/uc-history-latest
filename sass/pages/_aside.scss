@@ -1,4 +1,11 @@
 aside {
+    margin-top: 3rem;
+
+    .widget_block {
+        width: 100%;
+        border: 1px solid black;
+        margin-bottom: 3rem;
+    }
 
     h2 {
         font-size: 2rem;
@@ -10,6 +17,10 @@ aside {
     }
 
     li {
+        text-align: center;
+        margin-left: 0;
         border: 1px solid $color-black;
+
+
     }
 }
