@@ -19,9 +19,14 @@
     }
 
     &__item {
-        width: 45%;
+        flex-basis: 45%;
         margin-bottom: 5rem;
         border: 1px solid $color-black;
+
+        @include respond(tab-port) {
+            flex-basis: 100%;
+            margin-left: 0;
+        }
 
         &--text {
             padding: .5rem 1rem;

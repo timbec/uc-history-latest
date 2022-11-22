@@ -684,6 +684,12 @@ figcaption {
 	margin: 0 auto;
 }
 
+@media only screen and (max-width: 37.5em) {
+	.entry-content {
+		margin: 2rem;
+	}
+}
+
 .entry-content p {
 	max-width: 80rem;
 	margin: 0 auto;
@@ -1639,9 +1645,16 @@ input#submit:hover {
 }
 
 .page-places__item {
-	width: 45%;
+	flex-basis: 45%;
 	margin-bottom: 5rem;
 	border: 1px solid #09021d;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.page-places__item {
+		flex-basis: 100%;
+		margin-left: 0;
+	}
 }
 
 .page-places__item--text {
@@ -1732,7 +1745,9 @@ input#submit:hover {
 
 @media only screen and (max-width: 56.25em) {
 	.page-memorabilia__listing {
+		flex-direction: column;
 		margin-right: 0;
+		margin-bottom: 5rem;
 	}
 }
 
@@ -1740,8 +1755,20 @@ input#submit:hover {
 	flex-basis: 40%;
 }
 
+@media only screen and (max-width: 56.25em) {
+	.page-memorabilia__thumbnail {
+		flex-basis: 100%;
+	}
+}
+
 .page-memorabilia__content {
 	flex-basis: 60%;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.page-memorabilia__content {
+		flex-basis: 100%;
+	}
 }
 
 .page-memorabilia__container {
@@ -1761,8 +1788,14 @@ input#submit:hover {
 }
 
 .page-video__listing {
-	width: 25%;
+	flex-basis: 25%;
 	margin-bottom: 5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.page-video__listing {
+		flex-basis: 100%;
+	}
 }
 
 .page-photos__content {
@@ -1774,10 +1807,16 @@ input#submit:hover {
 .page-photos__listing {
 	display: flex;
 	flex-direction: column;
-	width: 32.33%;
+	flex-basis: 32.33%;
 	margin-left: 0;
 	margin-bottom: 5rem;
 	border: 1px solid #09021d;
+}
+
+@media only screen and (max-width: 56.25em) {
+	.page-photos__listing {
+		flex-basis: 100%;
+	}
 }
 
 .page-photos__thumbnail {

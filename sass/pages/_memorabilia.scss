@@ -16,16 +16,26 @@
         margin-right: 5rem;
 
         @include respond('tab-port') {
+            flex-direction: column;
             margin-right: 0;
+            margin-bottom: 5rem;
         }
     }
 
     &__thumbnail {
         flex-basis: 40%;
+
+        @include respond(tab-port) {
+            flex-basis: 100%;
+        }
     }
 
     &__content {
         flex-basis: 60%;
+
+        @include respond(tab-port) {
+            flex-basis: 100%;
+        }
     }
 
     &__container {

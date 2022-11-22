@@ -19,6 +19,10 @@
     max-width: 120rem;
     margin: 0 auto;
 
+    @include respond(phone) {
+        margin: 2rem;
+    }
+
     p {
         max-width: 80rem;
         // padding: 1rem 3rem;
