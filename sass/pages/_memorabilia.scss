@@ -32,6 +32,7 @@
 
     &__content {
         flex-basis: 60%;
+        margin-left: 5rem;
 
         @include respond(tab-port) {
             flex-basis: 100%;
