@@ -5,9 +5,9 @@
     
     $allPostsWidget = new WP_Query(array(
         'posts_per_page' => 8,
-        'post_type' => array( 'places','news','photos', 'writing'),
+        'post_type' => array( 'places','news','photos', 'writing', 'post'),
         'orderyby' => 'meta_value_num',
-        'order' => 'ASC',
+        'order' => 'DESC',
     )); 
     while ($allPostsWidget->have_posts()) {
         $allPostsWidget->the_post(); ?>

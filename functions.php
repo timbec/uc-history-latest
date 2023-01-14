@@ -265,14 +265,14 @@ new PlaceholderBlock("postlistall");
 class JSXBlock {
   function __construct($name, $renderCallback = null, $data=null) {
     $this->name = $name;
-	$this->data; 
+	$this->data = $data; 
 	$this->renderCallback = $renderCallback;
     add_action('init', [$this, 'onInit']);
   }
 
   function ourRenderCallback($attributes, $content) {
 	  ob_start();
-	  require get_theme_file_path("/uc-blocks/{$this->name}.php");
+	  include get_theme_file_path("/uc-blocks/{$this->name}.php");
 	  return ob_get_clean();
   }
 
@@ -284,7 +284,8 @@ class JSXBlock {
 	}
 
 	$ourArgs = array(
-		'editor_script' => $this->name
+		'editor_script' => $this->name,
+		'editor_style' => 'uc-blocks-css'
 	);
 
 	if ($this->renderCallback) {

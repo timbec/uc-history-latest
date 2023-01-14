@@ -5,9 +5,9 @@
     
     $newsWidget = new WP_Query(array(
         'posts_per_page' => 3,
-        'post_type' => 'news',
+        'post_type' => 'news', 'post',
         'orderyby' => 'meta_value_num',
-        'order' => 'ASC',
+        'order' => 'DESC',
     )); 
     while ($newsWidget->have_posts()) {
         $newsWidget->the_post(); ?>

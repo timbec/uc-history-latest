@@ -1126,9 +1126,38 @@ input#submit:hover {
 }
 
 .site-footer {
+	display: flex;
+	flex-direction: column;
 	background: #09021d;
+	align-items: center;
 	color: white;
-	padding: 10rem 0;
+}
+
+.site-footer__content {
+	width: 100%;
+	display: flex;
+	padding: 5rem 2rem;
+	justify-content: flex-start;
+}
+
+.site-footer__social-media--title {
+	font-size: 2rem;
+}
+
+.site-footer__social-media h3,
+.site-footer__social-media a {
+	color: #fff;
+}
+
+.site-footer__social-media li {
+	list-style: none;
+}
+
+.site-footer__copyright {
+	color: #fff;
+	width: 100%;
+	text-align: left;
+	padding: 2rem 5rem;
 }
 
 /*--------------------------------------------------------------
@@ -1496,7 +1525,7 @@ input#submit:hover {
 }
 
 .home .sidebar .uc-pin {
-	max-width: 10rem;
+	max-width: 8rem;
 }
 
 .wp-block-embed-youtube {
@@ -1740,14 +1769,16 @@ input#submit:hover {
 
 .page-memorabilia__listing {
 	display: flex;
+	padding: 5rem 0;
 	margin-right: 5rem;
+	border-bottom: 1px solid #09021d;
 }
 
 @media only screen and (max-width: 56.25em) {
 	.page-memorabilia__listing {
 		flex-direction: column;
-		margin-right: 0;
-		margin-bottom: 5rem;
+		margin: 0 3rem;
+		margin-bottom: 8rem;
 	}
 }
 
@@ -1769,6 +1800,7 @@ input#submit:hover {
 @media only screen and (max-width: 56.25em) {
 	.page-memorabilia__content {
 		flex-basis: 100%;
+		margin-left: 0;
 	}
 }
 

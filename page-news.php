@@ -28,17 +28,17 @@ get_header();
     <ul class="page-news__container">
     <?php 
          $newsWidget = new WP_Query(array(
-        'posts_per_page' => 6,
-        'post_type' => 'news',
+        'posts_per_page' => 10,
+        'post_type' => 'news','post',
         'orderyby' => 'meta_value_num',
-        'order' => 'ASC',
+        'order' => 'DESC',
     )); 
     while ($newsWidget->have_posts()) {
         $newsWidget->the_post(); ?>
         <li class="page-news__listing">
         <figure class="page-news__thumbnail">
             <a href="<?php the_permalink(); ?>">
-		<?php echo the_post_thumbnail(); ?>
+		    <?php echo the_post_thumbnail(); ?>
         </a>
         </figure>
         <div class="page-news__content">
