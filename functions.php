@@ -303,7 +303,36 @@ new JSXBlock('slide', true);
 
 
 /**
- * Implement the Custom Header feature.
+ * From here on in, forgetting about above * system and register blocks one by one
+ * 
+ * @return void
+ */		
+
+/**
+ * 
+ * Register Weather-app Block
+ * 
+ */
+//register block type weather-app
+function register_weather_app_block() {
+	wp_register_script(
+		'weather-app-block',
+		get_stylesheet_directory_uri() . '/build/weather-app.js',
+		array('wp-blocks', 'wp-editor')
+	);
+
+	register_block_type('ucblocktheme/weather-block', array(
+		'editor_script' => 'weather-app-block',
+		'render_callback' => 'render_weather_app_block'
+	));
+}
+
+//initialize weather-app block	
+add_action('init', 'register_weather_app_block');
+
+
+/**
+ * Custom Post Types
  */
 require get_template_directory() . '/inc/custom-post-types.php';
 
