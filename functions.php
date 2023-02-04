@@ -300,6 +300,7 @@ class JSXBlock {
 new JSXBlock('banner', true);
 new JSXBlock('slideshow', true);
 new JSXBlock('slide', true);
+new JSXBlock('weatherapp', true);
 
 
 /**
@@ -314,21 +315,21 @@ new JSXBlock('slide', true);
  * 
  */
 //register block type weather-app
-function register_weather_app_block() {
-	wp_register_script(
-		'weather-app-block',
-		get_stylesheet_directory_uri() . '/build/weather-app.js',
-		array('wp-blocks', 'wp-editor')
-	);
+// function register_weather_app_block() {
+// 	wp_register_script(
+// 		'weather-app-block',
+// 		get_stylesheet_directory_uri() . '/build/weather-app.js',
+// 		array('wp-blocks', 'wp-editor')
+// 	);
 
-	register_block_type('ucblocktheme/weather-block', array(
-		'editor_script' => 'weather-app-block',
-		'render_callback' => 'render_weather_app_block'
-	));
-}
+// 	register_block_type('ucblocktheme/weather-block', array(
+// 		'editor_script' => 'weather-app-block',
+// 		'render_callback' => 'render_weather_app_block'
+// 	));
+// }
 
-//initialize weather-app block	
-add_action('init', 'register_weather_app_block');
+// //initialize weather-app block	
+// add_action('init', 'register_weather_app_block');
 
 
 /**
