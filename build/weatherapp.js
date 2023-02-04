@@ -120,12 +120,6 @@ __webpack_require__.r(__webpack_exports__);
  * Weather App Block
  * 
  *  
- 
-/**
- * 
- * Weather App Block
- * 
- *  
  */
 
 
@@ -136,6 +130,67 @@ const {
 const API_KEY = '49fd6140676349857149724d8baf9c2c';
 const lat = '59.575350';
 const lon = '-108.612220';
+wp.blocks.registerBlockType('ucblocktheme/weatherapp', {
+  title: 'Weather Block',
+  icon: 'cloud',
+  category: 'common',
+  selfClosing: false,
+  tagName: "div",
+  type: "StartTag",
+  attributes: {
+    weatherData: {
+      type: "object"
+    }
+  },
+  edit: EditComponent,
+  save: SaveComponent
+});
+
+function EditComponent(props) {
+  const [weatherData, setWeatherData] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)({});
+  (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+    async function getData() {
+      const data = await getWeatherData();
+      setWeatherData(data);
+    }
+
+    getData();
+  }, []);
+  setInterval(async () => {
+    const data = await getWeatherData();
+    setWeatherData(data);
+  }, 14400000);
+  console.log(weatherData);
+  props.setAttributes({
+    weatherData: weatherData
+  });
+  console.log(props.attributes.weatherData);
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "weather-block"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    id: "temperature"
+  }, "Temperature: ", weatherData.temperature || 'loading...', "\xB0C"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    id: "humidity"
+  }, "Humidity: ", weatherData.humidity || 'loading...', "%"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    id: "conditions"
+  }, "Conditions: ", weatherData.weather || 'loading...')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "innerBlocks"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, null)));
+}
+
+function SaveComponent(props) {
+  //output data to the DOM
+  console.log(props.attributes.weatherData);
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "weather-block"
+  }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h3", null, "Uranium City Weather: "), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    id: "temperature"
+  }, "Temperature: ", props.attributes.weatherData.temperature || 'loading...', "\xB0C"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    id: "humidity"
+  }, "Humidity: ", props.attributes.weatherData.humidity || 'loading...', "%"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    id: "conditions"
+  }, "Conditions: ", props.attributes.weatherData.weather || 'loading...'));
+}
 
 async function getWeatherData() {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`);
@@ -154,46 +209,6 @@ async function getWeatherData() {
     weather
   };
 }
-
-wp.blocks.registerBlockType('ucblocktheme/weatherapp', {
-  title: 'Weather Block',
-  icon: 'cloud',
-  category: 'common',
-  selfClosing: false,
-  tagName: "div",
-  type: "StartTag",
-  edit: function (props) {
-    const [weatherData, setWeatherData] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)({});
-    (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-      async function getData() {
-        const data = await getWeatherData();
-        setWeatherData(data);
-      }
-
-      getData();
-    }, []);
-    setInterval(async () => {
-      const data = await getWeatherData();
-      setWeatherData(data);
-    }, 14400000);
-    console.log(weatherData);
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "weather-block"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-      id: "temperature"
-    }, "Temperature: ", weatherData.temperature || 'loading...', "\xB0C"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-      id: "humidity"
-    }, "Humidity: ", weatherData.humidity || 'loading...', "%"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-      id: "conditions"
-    }, "Conditions: ", weatherData.weather || 'loading...')), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks, null)));
-  },
-  save: function (props) {
-    // output the block's content on the front-end             
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-      className: "weather-block"
-    }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__.InnerBlocks.Content, null));
-  }
-});
 })();
 
 /******/ })()
