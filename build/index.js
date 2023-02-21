@@ -2,10 +2,10 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/@glidejs/glide/dist/glide.esm.js":
-/*!*******************************************************!*\
-  !*** ./node_modules/@glidejs/glide/dist/glide.esm.js ***!
-  \*******************************************************/
+/***/ "../node_modules/@glidejs/glide/dist/glide.esm.js":
+/*!********************************************************!*\
+  !*** ../node_modules/@glidejs/glide/dist/glide.esm.js ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -3908,7 +3908,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "./node_modules/@glidejs/glide/dist/glide.esm.js");
+/* harmony import */ var _glidejs_glide__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @glidejs/glide */ "../node_modules/@glidejs/glide/dist/glide.esm.js");
 
 
 class HeroSlider {

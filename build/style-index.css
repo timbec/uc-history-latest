@@ -1,6 +1,6 @@
-/*!****************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./sass/style.scss ***!
-  \****************************************************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./sass/style.scss ***!
+  \*******************************************************************************************************************************************************************************************************************************************/
 /*!
 Theme Name: Uranium City History 2022
 Author: Tim Beckett
@@ -1291,6 +1291,45 @@ input#submit:hover {
 }
 .all-posts-list .list__container--item__content {
   margin: 0.6rem 1.6rem;
+}
+
+.weather-block {
+  background: #fff;
+  border: 1px solid #09021d;
+  border-radius: 5px;
+  padding: 1rem 1rem 1rem 2rem;
+  margin: 10px 0;
+  text-align: center;
+}
+.weather-block__content {
+  max-width: 40rem;
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 56.25em) {
+  .weather-block__content {
+    flex-direction: column;
+  }
+}
+.weather-block__content p {
+  font-size: 1.4rem;
+  margin: 1rem auto;
+}
+.weather-block__content p#temperature {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.weather-block__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #09021d;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.weather-block img {
+  max-width: 12rem;
+  height: auto;
 }
 
 /*--------------------------------------------------------------
