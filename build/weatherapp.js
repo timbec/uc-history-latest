@@ -187,11 +187,11 @@ function EditComponent(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: `${imageUrl}/icons/${weatherData.icon}.png` || 'loading . . . ',
     alt: "weather icon"
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    id: "temperature"
+  }, weatherData.temperature || 'loading...', "\xB0C")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "weather-block__content--stats"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    id: "temperature"
-  }, weatherData.temperature || 'loading...', "\xB0C"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     id: "humidity"
   }, "Humidity: ", weatherData.humidity || 'loading...', "%"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     id: "feels-like"
@@ -219,17 +219,15 @@ function SaveComponent(props) {
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("img", {
     src: `${props.attributes.imageUrl}/icons/${props.attributes.weatherData.icon}.png` || 'loading . . . ',
     alt: "weather icon"
-  })), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
+    id: "temperature"
+  }, props.attributes.weatherData.temperature || 'loading...', "\xB0C")), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "weather-block__content--stats"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    id: "temperature"
-  }, props.attributes.weatherData.temperature || 'loading...', "\xB0C"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     id: "humidity"
   }, "Humidity: ", props.attributes.weatherData.humidity || 'loading...', "%"), " ", (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     id: "conditions"
   }, "Conditions: ", props.attributes.weatherData.weather || 'loading...'), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
-    id: "humidity"
-  }, "Humidity: ", props.attributes.weatherData.humidity || 'loading...', "%"), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", {
     id: "feels-like"
   }, "Feels Like: ", props.attributes.weatherData.feelsLike || 'loading...', "\xB0C"))));
 }

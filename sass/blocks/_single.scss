@@ -1,0 +1,36 @@
+.home {
+
+    .single {
+
+        &__container {
+
+            &--item {
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 1rem;
+                margin-bottom: 2rem;
+                border-bottom: 1px solid $color-black;
+
+                &__title {
+
+
+                    a {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        color: $color-black;
+                    }
+                }
+
+                &__image {
+                    max-width: 22rem;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+
+            }
+        }
+    }
+}

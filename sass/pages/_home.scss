@@ -4,6 +4,10 @@
         display: none;
     }
 
+    #intro>p {
+        max-width: 100%;
+    }
+
     .intro-column {
         margin-top: 3rem;
     }
@@ -179,4 +183,18 @@
 
 .wp-block-latest-comments {
     max-width: 60rem;
+}
+
+// latest posts
+.single {
+
+    &__container {
+
+        &--item {
+
+            img {
+                max-height: 22rem;
+            }
+        }
+    }
 }

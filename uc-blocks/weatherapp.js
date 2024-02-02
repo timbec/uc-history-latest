@@ -67,9 +67,10 @@ function EditComponent(props) {
                 <div className="weather-block__content">
                     <div className="weather-block__content--icon">
                         <img src={`${imageUrl}/icons/${weatherData.icon}.png` || 'loading . . . '} alt="weather icon" />
+                        <p id="temperature">{weatherData.temperature || 'loading...'}°C</p>
                     </div>
                     <div className="weather-block__content--stats">
-                        <p id="temperature">{weatherData.temperature || 'loading...'}°C</p>
+
                         <p id="humidity">Humidity: {weatherData.humidity || 'loading...'}%</p>
                         <p id="feels-like">Feels Like: {weatherData.feelsLike || 'loading...'}°C</p>
                         <p id="conditions">Conditions: {weatherData.weather || 'loading...'}</p>
@@ -92,13 +93,13 @@ function SaveComponent(props) {
             <div className="weather-block__content">
                 <div className="weather-block__content--icon">
                     <img src={`${props.attributes.imageUrl}/icons/${props.attributes.weatherData.icon}.png` || 'loading . . . '} alt="weather icon" />
-                </div>
-                <div className="weather-block__content--stats">
                     <p id="temperature">
                         {props.attributes.weatherData.temperature || 'loading...'}°C
                     </p>
+                </div>
+                <div className="weather-block__content--stats">
+
                     <p id="humidity">Humidity: {props.attributes.weatherData.humidity || 'loading...'}%</p> <p id="conditions">Conditions: {props.attributes.weatherData.weather || 'loading...'}</p>
-                    <p id="humidity">Humidity: {props.attributes.weatherData.humidity || 'loading...'}%</p>
                     <p id="feels-like">Feels Like: {props.attributes.weatherData.feelsLike || 'loading...'}°C</p>
                 </div>
             </div>

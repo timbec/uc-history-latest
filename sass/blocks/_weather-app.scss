@@ -9,36 +9,39 @@
     &__content {
         max-width: 40rem;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         @include respond(tab-port) {
-            flex-direction: column;
+            // flex-direction: column;
         }
 
         p {
             font-size: 1.4rem;
-            margin: 1rem auto;
+            margin: .2rem auto;
         }
 
         p#temperature {
             font-size: 2rem;
+            line-height: 1.2;
             font-weight: 500;
+            text-align: left;
+            color: $color-black;
         }
 
         &--stats {}
     }
 
     &__title {
-        font-size: 2.2rem;
+        font-size: 1.2rem;
         font-weight: 700;
         color: $color-black;
         text-transform: uppercase;
-        margin-bottom: 10px;
-        text-align: center;
+        margin-bottom: 0px;
+        text-align: left;
     }
 
     img {
-        max-width: 12rem;
+        max-width: 10rem;
         height: auto;
     }
 }

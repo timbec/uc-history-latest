@@ -1,6 +1,6 @@
-/*!*******************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ../node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!../node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!../node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./sass/style.scss ***!
-  \*******************************************************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./sass/style.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************/
 /*!
 Theme Name: Uranium City History 2022
 Author: Tim Beckett
@@ -675,7 +675,7 @@ figcaption {
 }
 
 .entry-content {
-  max-width: 120rem;
+  max-width: 100%;
   margin: 0 auto;
 }
 @media only screen and (max-width: 37.5em) {
@@ -1304,31 +1304,66 @@ input#submit:hover {
 .weather-block__content {
   max-width: 40rem;
   display: flex;
-  justify-content: space-between;
-}
-@media only screen and (max-width: 56.25em) {
-  .weather-block__content {
-    flex-direction: column;
-  }
+  justify-content: space-around;
 }
 .weather-block__content p {
   font-size: 1.4rem;
-  margin: 1rem auto;
+  margin: 0.2rem auto;
 }
 .weather-block__content p#temperature {
   font-size: 2rem;
+  line-height: 1.2;
   font-weight: 500;
+  text-align: left;
+  color: #09021d;
 }
 .weather-block__title {
-  font-size: 2.2rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: #09021d;
   text-transform: uppercase;
-  margin-bottom: 10px;
-  text-align: center;
+  margin-bottom: 0px;
+  text-align: left;
 }
 .weather-block img {
-  max-width: 12rem;
+  max-width: 10rem;
+  height: auto;
+}
+
+.entry-content .image-caption {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.entry-content .image-caption__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.entry-content .image-caption__credit {
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  margin-right: 0;
+}
+
+.home .single__container--item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #09021d;
+}
+.home .single__container--item__title a {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #09021d;
+}
+.home .single__container--item__image {
+  max-width: 22rem;
+}
+.home .single__container--item__image img {
+  width: 100%;
   height: auto;
 }
 
@@ -1337,6 +1372,9 @@ input#submit:hover {
 --------------------------------------------------------------*/
 .home .entry-title {
   display: none;
+}
+.home #intro > p {
+  max-width: 100%;
 }
 .home .intro-column {
   margin-top: 3rem;
@@ -1801,6 +1839,10 @@ aside li {
   text-align: center;
   margin-left: 0;
   border: 1px solid #09021d;
+}
+
+.pin-image {
+  max-width: 10rem;
 }
 
 /*--------------------------------------------------------------

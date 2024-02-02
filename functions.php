@@ -139,6 +139,13 @@ function uc_history_2022_widgets_init() {
 add_action( 'widgets_init', 'uc_history_2022_widgets_init' );
 
 
+/**Limit Excerpt Length */
+function custom_excerpt_length($length) {
+    return $length;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+
 /************************************
  * FROM 2022
  ************************************/
@@ -255,6 +262,7 @@ new PlaceholderBlock("postlistnews");
 new PlaceholderBlock("postlistphotos");
 new PlaceholderBlock("postlistwriting");
 new PlaceholderBlock("postlistall");
+new PlaceholderBlock("postlistsingle");
 
 
 /***
