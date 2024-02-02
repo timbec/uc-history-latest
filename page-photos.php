@@ -37,8 +37,8 @@ get_header();
         <li class="page-photos__listing">
         <figure class="page-photos__thumbnail">
             <a href="<?php the_permalink(); ?>">
-		<?php echo the_post_thumbnail(); ?>
-        </a>
+            <?php echo the_post_thumbnail(); ?>
+            </a>
         </figure>
         <div class="page-photos__meta">
             		<h3>

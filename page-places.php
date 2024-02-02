@@ -27,7 +27,7 @@ get_header();
         <?php 
     
     $placesWidget = new WP_Query(array(
-        'posts_per_page' => 4,
+        'posts_per_page' => -1,
         'post_type' => 'places',
         'orderyby' => 'meta_value_num',
         'order' => 'ASC',

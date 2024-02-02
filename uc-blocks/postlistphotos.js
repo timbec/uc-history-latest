@@ -1,3 +1,6 @@
+
+
+//create a post list block
 wp.blocks.registerBlockType("ucblocktheme/postlistphotos", {
     title: "Photos List",
     edit: function () {
@@ -6,4 +9,4 @@ wp.blocks.registerBlockType("ucblocktheme/postlistphotos", {
     save: function () {
         return null
     }
-})
+});

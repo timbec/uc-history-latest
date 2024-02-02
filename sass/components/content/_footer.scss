@@ -1,5 +1,38 @@
 .site-footer {
+
+    display: flex;
+    flex-direction: column;
     background: $color-black;
+    align-items: center;
     color: white;
-    padding: 10rem 0;
+
+    &__content {
+        width: 100%;
+        display: flex;
+        padding: 5rem 2rem;
+        justify-content: flex-start;
+    }
+
+    &__social-media {
+
+        &--title {
+            font-size: 2rem;
+        }
+
+        h3,
+        a {
+            color: $color-white;
+        }
+
+        li {
+            list-style: none;
+        }
+    }
+
+    &__copyright {
+        color: $color-white;
+        width: 100%;
+        text-align: left;
+        padding: 2rem 5rem;
+    }
 }

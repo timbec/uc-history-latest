@@ -1,0 +1,61 @@
+// .inline {
+//     width: 55%;
+//     height: auto;
+//     margin: 2rem auto;
+
+//     @include respond(tab-port) {
+//         width: 85%;
+//     }
+
+//     @include respond(phone) {
+//         width: 100%;
+//     }
+// }
+
+
+// From staging site: 
+.single-writing {
+
+    .inline {
+        width: 55%;
+        height: auto;
+        margin: 2rem auto;
+    }
+
+    .inline+p {
+        width: 55%;
+        font-size: 1.8rem;
+        margin-top: 2rem;
+    }
+
+    .underline {
+        font-size: 3rem;
+        text-decoration: underline;
+        font-weight: bold;
+        color: #09021d;
+        width: 30rem;
+        margin: 3rem auto;
+        //border-bottom: 2px solid #09021d;
+    }
+
+    @media only screen and (max-width: 56.25em) {
+        .inline {
+            width: 85%;
+        }
+
+        .inline+p {
+            width: 85%;
+        }
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        .inline {
+            width: 100%;
+        }
+
+        .inline+p {
+            width: 100%;
+        }
+    }
+
+}

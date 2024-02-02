@@ -139,6 +139,13 @@ function uc_history_2022_widgets_init() {
 add_action( 'widgets_init', 'uc_history_2022_widgets_init' );
 
 
+/**Limit Excerpt Length */
+function custom_excerpt_length($length) {
+    return $length;
+}
+add_filter('excerpt_length', 'custom_excerpt_length', 999);
+
+
 /************************************
  * FROM 2022
  ************************************/
@@ -255,6 +262,7 @@ new PlaceholderBlock("postlistnews");
 new PlaceholderBlock("postlistphotos");
 new PlaceholderBlock("postlistwriting");
 new PlaceholderBlock("postlistall");
+new PlaceholderBlock("postlistsingle");
 
 
 /***
@@ -265,14 +273,14 @@ new PlaceholderBlock("postlistall");
 class JSXBlock {
   function __construct($name, $renderCallback = null, $data=null) {
     $this->name = $name;
-	$this->data; 
+	$this->data = $data; 
 	$this->renderCallback = $renderCallback;
     add_action('init', [$this, 'onInit']);
   }
 
   function ourRenderCallback($attributes, $content) {
 	  ob_start();
-	  require get_theme_file_path("/uc-blocks/{$this->name}.php");
+	  include get_theme_file_path("/uc-blocks/{$this->name}.php");
 	  return ob_get_clean();
   }
 
@@ -284,7 +292,8 @@ class JSXBlock {
 	}
 
 	$ourArgs = array(
-		'editor_script' => $this->name
+		'editor_script' => $this->name,
+		'editor_style' => 'uc-blocks-css'
 	);
 
 	if ($this->renderCallback) {
@@ -299,10 +308,40 @@ class JSXBlock {
 new JSXBlock('banner', true);
 new JSXBlock('slideshow', true);
 new JSXBlock('slide', true);
+new JSXBlock('weatherapp', true);
 
 
 /**
- * Implement the Custom Header feature.
+ * From here on in, forgetting about above * system and register blocks one by one
+ * 
+ * @return void
+ */		
+
+/**
+ * 
+ * Register Weather-app Block
+ * 
+ */
+//register block type weather-app
+// function register_weather_app_block() {
+// 	wp_register_script(
+// 		'weather-app-block',
+// 		get_stylesheet_directory_uri() . '/build/weather-app.js',
+// 		array('wp-blocks', 'wp-editor')
+// 	);
+
+// 	register_block_type('ucblocktheme/weather-block', array(
+// 		'editor_script' => 'weather-app-block',
+// 		'render_callback' => 'render_weather_app_block'
+// 	));
+// }
+
+// //initialize weather-app block	
+// add_action('init', 'register_weather_app_block');
+
+
+/**
+ * Custom Post Types
  */
 require get_template_directory() . '/inc/custom-post-types.php';
 

@@ -1,0 +1,1 @@
+<h1>Featured Image Page</h1>

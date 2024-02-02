@@ -12,9 +12,23 @@
 ?>
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			
-		</div><!-- .site-info -->
+		<div class="site-footer__content">
+			<ul class="site-footer__social-media">
+			<h3 class="site-footer__social-media--title">Uranium City and Area Facebook Groups:</h3>
+			<li>
+				<a href="">Uranium City Friends</a>
+			</li>
+			<li>
+				<a href="">Gunnar Mines Rediscovered</a>
+			</li>
+			<li>
+				<a href="">Port Radium</a>
+			</li>
+		</ul><!-- .site-info -->
+		</div>
+		<p class="site-footer__copyright">
+			&copy; <?php echo date("Y"); ?> Tim Beckett
+		</p>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
